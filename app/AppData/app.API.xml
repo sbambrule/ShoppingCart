@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>app</name>
+    </assembly>
+    <members>
+        <member name="T:DataAccessService.API.Controllers.CustomerController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DataAccessService.API.Controllers.CustomerController.GetCustomerByIdAsync(System.UInt64)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataAccessService.API.Controllers.CustomerController.GetCustomerSearch">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
