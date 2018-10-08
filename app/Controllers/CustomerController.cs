@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,7 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Auth0.AuthenticationApi;
 using Auth0.AuthenticationApi.Models;
-using Common.Data.Model; 
 using DataAccessService.API.Filters;
 using DataAccessService.API.Response;
 using Microsoft.AspNetCore.Mvc;
@@ -40,7 +39,7 @@ namespace DataAccessService.API.Controllers
             }
 
 
-            return Ok(new GetCustomerResponse() { Customer = new Customer() });
+            return Ok(new GetCustomerResponse() {  });
         }
 
         /// <summary>
@@ -50,7 +49,7 @@ namespace DataAccessService.API.Controllers
         [HttpGet("GetCustomerSearch")]
         public IActionResult GetCustomerSearch()
         {
-            return Ok(new GetCustomerSearchResponse() { Customers =new List<Customer>() });
+            return Ok(new GetCustomerSearchResponse() { });
         }
     }   
     
