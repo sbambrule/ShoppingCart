@@ -36,9 +36,15 @@ namespace app
         options.CheckConsentNeeded = context => true;
         options.MinimumSameSitePolicy = SameSiteMode.None;
       });
+
       services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
                 .AddJsonOptions(o => o.SerializerSettings.ContractResolver = new DefaultContractResolver());
 
+      services.AddCors(options =>
+      {
+        options.AddPolicy("AllowSpecificOrigin",
+            builder => builder.WithOrigins("http://localhost:4200"));
+      });
       services.AddSwaggerGen(c =>
       {
         c.SwaggerDoc("v1", new Info
@@ -77,7 +83,9 @@ namespace app
       app.UseCookiePolicy();
 
       // Shows UseCors with named policy.
-      app.UseCors("AllowSpecificOrigin");
+      app.UseCors(builder =>
+         builder.WithOrigins("http://localhost:4200"));
+
 
       app.UseMvcWithDefaultRoute();
       app.UseSwagger(c =>
