@@ -9,6 +9,7 @@ using Auth0.AuthenticationApi;
 using Auth0.AuthenticationApi.Models;
 using DataAccessService.API.Filters;
 using DataAccessService.API.Response;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DataAccessService.API.Controllers
@@ -18,7 +19,8 @@ namespace DataAccessService.API.Controllers
     /// </summary>
     [Route("[controller]")]
     [ApiExceptionFilterAttribute]
-    public class CustomerController : Controller
+    [EnableCors("AllowSpecificOrigin")]
+  public class CustomerController : Controller
     {
         /// <summary>
         /// 

@@ -76,6 +76,9 @@ namespace app
       app.UseStaticFiles();
       app.UseCookiePolicy();
 
+      // Shows UseCors with named policy.
+      app.UseCors("AllowSpecificOrigin");
+
       app.UseMvcWithDefaultRoute();
       app.UseSwagger(c =>
       {
