@@ -1,4 +1,3 @@
-using DataAccessService.API.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,8 +5,12 @@ using System.Threading.Tasks;
 
 namespace DataAccessService.API.Response
 {
-  public class GetCustomerSearchResponse : ResponseBase
+
+  /// <summary>
+  /// ResponseBase
+  /// </summary>
+  public class ResponseBase
   {
-    public List<Customer> CustomerList { get; set; }
+    public bool IsSuccess { get; set; }
   }
 }

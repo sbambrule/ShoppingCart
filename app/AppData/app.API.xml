@@ -21,5 +21,15 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:DataAccessService.API.Response.LoginSession">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DataAccessService.API.Response.ResponseBase">
+            <summary>
+            ResponseBase
+            </summary>
+        </member>
     </members>
 </doc>

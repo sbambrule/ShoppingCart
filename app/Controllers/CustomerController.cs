@@ -28,15 +28,7 @@ namespace DataAccessService.API.Controllers
         public   IActionResult GetCustomerByIdAsync(ulong CustomerId)
         {
 
-            try
-            {
-             
-
-            }
-            catch (Exception e)
-            {
-                ModelState.AddModelError("", e.Message);
-            }
+            
 
 
             return Ok(new GetCustomerResponse() {  });
