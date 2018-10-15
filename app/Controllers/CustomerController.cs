@@ -27,7 +27,7 @@ namespace DataAccessService.API.Controllers
     /// 
     /// </summary>
     /// <returns></returns>
-    [HttpGet("GetCustomerById")]
+    [HttpPost("GetCustomerById")]
     public IActionResult GetCustomerById(ulong CustomerId)
     {
       return Ok(new GetCustomerResponse() { });
@@ -37,8 +37,8 @@ namespace DataAccessService.API.Controllers
     /// 
     /// </summary>
     /// <returns></returns>
-    [HttpGet("GetCustomerSearch")]
-    public IActionResult GetCustomerSearch()
+    [HttpPost("GetCustomerSearch")]
+    public IActionResult GetCustomerSearch(Customer customer)
     {
       return Ok(new GetCustomerSearchResponse() { });
     }
