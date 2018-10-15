@@ -14,8 +14,7 @@ namespace app.Controllers
   [ApiExceptionFilterAttribute]
   [EnableCors("AllowSpecificOrigin")]
   public class LoginController : Controller
-  {
-    [HttpPost]
+  { 
     [HttpPost("Login")]
     public ActionResult Login(IFormCollection collection)
     {

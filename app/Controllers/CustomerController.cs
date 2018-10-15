@@ -47,8 +47,8 @@ namespace DataAccessService.API.Controllers
     /// </summary>
     /// <param name="customer"></param>
     /// <returns></returns>
-    [HttpPost("InsertCustomer")]
-    public IActionResult InsertCustomer(Customer customer)
+    [HttpPost("Add")]
+    public IActionResult Add(Customer customer)
     {
 
       return Ok(new InsertCustomerResponse() { });
@@ -59,8 +59,8 @@ namespace DataAccessService.API.Controllers
     /// </summary>
     /// <param name="customer"></param>
     /// <returns></returns>
-    [HttpPost("UpdateCustomer")]
-    public IActionResult UpdateCustomer(Customer customer)
+    [HttpPost("Update")]
+    public IActionResult Update(Customer customer)
     {
 
       return Ok(new UpdateCustomerResponse() { });
