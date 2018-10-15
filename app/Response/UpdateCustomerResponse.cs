@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace DataAccessService.API.Response
 {
-  public class GetCustomerResponse : ResponseBase
+  public class UpdateCustomerResponse : ResponseBase
   {
-    public Customer Customer { get; set; }
+   
   }
 }
