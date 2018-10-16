@@ -30,7 +30,7 @@ namespace DataAccessService.API.Controllers
     [HttpPost("GetCustomerById")]
     public IActionResult GetCustomerById(ulong CustomerId)
     {
-      return Ok(new GetCustomerResponse() { });
+      return Ok(new GetCustomerResponse() { Customer = new Customer() { IdCustomer = 1, LastName = "Bambrule", FirstName = "Santosh" } });
     }
 
     /// <summary>
@@ -40,7 +40,14 @@ namespace DataAccessService.API.Controllers
     [HttpPost("GetCustomerSearch")]
     public IActionResult GetCustomerSearch(Customer customer)
     {
-      return Ok(new GetCustomerSearchResponse() { });
+      return Ok(new GetCustomerSearchResponse()
+      {
+        CustomerList = new List<Customer>(){
+       new Customer() { IdCustomer = 1, LastName = "Bambrule", FirstName = "Santosh" },
+       new Customer() { IdCustomer = 2, LastName = "Ydav", FirstName = "Raju" },
+       new Customer() { IdCustomer = 3, LastName = "omkar", FirstName = "sharma" }
+      }
+      });
     }
     /// <summary>
     /// 
@@ -51,7 +58,7 @@ namespace DataAccessService.API.Controllers
     public IActionResult Add(Customer customer)
     {
 
-      return Ok(new InsertCustomerResponse() { });
+      return Ok(new InsertCustomerResponse() { IsSuccess=true });
     }
 
     /// <summary>
@@ -63,7 +70,7 @@ namespace DataAccessService.API.Controllers
     public IActionResult Update(Customer customer)
     {
 
-      return Ok(new UpdateCustomerResponse() { });
+      return Ok(new UpdateCustomerResponse() { IsSuccess = true });
     }
   }
 }
